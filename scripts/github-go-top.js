@@ -1,6 +1,6 @@
 // ==UserScript==
 // @author gaojr
-// @namespace https://github.com/gaojr/greasyfork-scripts
+// @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn Github一键返回顶部
 // @name GithubGoTop
 // @version 0.4
