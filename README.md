@@ -36,7 +36,7 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 推荐的脚本及我的设置~
 
 * [StylishThemes/GitHub-Dark-Script](https://greasyfork.org/en/scripts/15562-github-dark-script)
-    ![settings](./resources/GitHub-Dark_Settings.png)
+    <br/>![settings](./resources/GitHub-Dark_Settings.png)
 * [Mottie/GitHub code show whitespace](https://greasyfork.org/en/scripts/28454-github-code-show-whitespace)
     ```json
     {
