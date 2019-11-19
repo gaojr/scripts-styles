@@ -4,14 +4,16 @@ Greasyfork Scripts
 
 ## GitHub
 
-### [GitHubGoTop](https://greasyfork.org/zh-CN/scripts/392584-githubgotop)
+### GitHubGoTop
 
- Github 一键返回顶部
+GitHub 增加“一键返回顶部”按钮
 
-[code](./github-go-top.js)
+* [Direct Install](./scripts/github-go-top.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/392584-githubgotop)
 
-### [GitHubHideDesktop](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
+### GitHubHideDesktop
 
-Github 隐藏 Desktop 按钮
+GitHub 隐藏与“GitHub Desktop”相关的按钮
 
-[code](./github-hide-desktop.js)
+* [Direct Install](./scripts/github-hide-desktop.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
