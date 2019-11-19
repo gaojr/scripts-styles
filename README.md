@@ -1,6 +1,6 @@
-# greasyfork-scripts
+# tampermonkey-scripts
 
-Greasyfork Scripts
+Tampermonkey Scripts
 
 ## GitHub
 
