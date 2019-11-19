@@ -13,7 +13,6 @@
 // ==/UserScript==
 
 (function () {
-  'use strict';
   var body = document.querySelector('body');
   var goTop = document.createElement('div');
   var imgBox = document.createElement('img');
