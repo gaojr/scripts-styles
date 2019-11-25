@@ -31,6 +31,15 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 * [Direct Install](./scripts/github-hide-desktop.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
 
+### 异次元
+
+#### RemoveAdds
+
+异次元移除广告
+
+* [Direct Install](./scripts/iplaysoft-remove-adds.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/392892-iplaysoftremoveadds)
+
 ## 脚本(别人写的)
 
 推荐的脚本及我的设置~
