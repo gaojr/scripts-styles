@@ -12,7 +12,7 @@ Tampermonkey Scripts
 2. 视频时关闭弹幕、自动宽屏
 3. 直播时关闭弹幕
 
-* [Direct Install](./scripts/bilibili-enhanced.js)
+* [Direct Install](./scripts/bilibili-enhanced.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/380783-bilibilienhanced)
 
 ### GitHub
@@ -21,14 +21,14 @@ Tampermonkey Scripts
 
 GitHub 增加“一键返回顶部”按钮
 
-* [Direct Install](./scripts/github-go-top.js)
+* [Direct Install](./scripts/github-go-top.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/392584-githubgotop)
 
 #### GitHubHideDesktop
 
 GitHub 隐藏与“GitHub Desktop”相关的按钮
 
-* [Direct Install](./scripts/github-hide-desktop.js)
+* [Direct Install](./scripts/github-hide-desktop.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
 
 ### 异次元
@@ -37,7 +37,7 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 
 异次元移除广告
 
-* [Direct Install](./scripts/iplaysoft-remove-adds.js)
+* [Direct Install](./scripts/iplaysoft-remove-adds.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/392892-iplaysoftremoveadds)
 
 ## 脚本(别人写的)
