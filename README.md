@@ -4,6 +4,13 @@ Tampermonkey Scripts
 
 ## 脚本(我写的)
 
+### 通用
+
+移除广告
+
+* [Direct Install](./scripts/remove-adds.user.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393030-removeadds)
+
 ### Bilibili
 
 #### BilibiliEnhanced
