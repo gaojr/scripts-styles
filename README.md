@@ -57,3 +57,12 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
         "ghcm-colors": [ "#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc" ]
     }
     ```
+
+## 库(我写的)
+
+### utils
+
+一些公用方法
+
+* [Direct Install](./libraries/utils.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393085-commonsutil)
