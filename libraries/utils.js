@@ -2,7 +2,7 @@
 // @author gaojr
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
-// @name Utils
+// @name CommonsUtil
 // @version 0.1
 // @description utility methods
 // @grant none
