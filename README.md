@@ -66,3 +66,10 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 
 * [Direct Install](./libraries/utils.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/393085-commonsutil)
+
+### css
+
+一些常用 css
+
+* [Direct Install](./libraries/css.user.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393202-cssutil)
