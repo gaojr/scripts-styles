@@ -3,15 +3,15 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.3
+// @version 0.4
 // @description utility methods
 // @grant none
 // ==/UserScript==
 
 /**
  * 输出错误
- * @param functionName 方法名
- * @param error 错误
+ * @param {string} functionName 方法名
+ * @param {Error} error 错误
  */
 const error = function (functionName, error) {
   console.error('function name: ' + functionName + "\nerror: " + error);
@@ -19,7 +19,7 @@ const error = function (functionName, error) {
 
 /**
  * 循环移除元素
- * @param ele 元素
+ * @param {HTMLElement} ele 元素
  */
 const removeRecursively = function (ele) {
   try {
@@ -35,12 +35,12 @@ const removeRecursively = function (ele) {
 
 /**
  * 移除选择器对象
- * @param selector 选择器
- * @param only 是否仅移除该对象
+ * @param {string} selector 选择器
+ * @param {boolean} only 是否仅移除该对象
  */
 const removeIt = function (selector, only) {
   try {
-    if (!!only) {
+    if (only === true) {
       document.querySelector(selector).remove();
     } else {
       removeRecursively(document.querySelector(selector));
@@ -52,7 +52,7 @@ const removeIt = function (selector, only) {
 
 /**
  * 移除选择器所有对象
- * @param selector 选择器
+ * @param {string} selector 选择器
  */
 const removeAll = function (selector) {
   try {
@@ -66,7 +66,7 @@ const removeAll = function (selector) {
 
 /**
  * 点击选择器对象
- * @param selector 选择器
+ * @param {string} selector 选择器
  */
 const clickIt = function (selector) {
   try {
