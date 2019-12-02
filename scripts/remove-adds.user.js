@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.2
+// @version 0.3
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
@@ -85,7 +85,7 @@ const dealCsdn = function () {
   const article = /https:\/\/.*\.csdn\.net\/.*\/article\/details\/.*/;
 
   if (article.test(wlh)) {
-    // TODO document.querySelector('#dmp_ad_58').remove();
+    targets.push('#dmp_ad_58');
     targets.push('#mainBox > aside');
     targets.push('.tool-box.vertical');
     targets.push('.recommend-box');
