@@ -3,11 +3,11 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @name GitHubHideDesktop
-// @version 0.2
+// @version 0.3
 // @description hide "Open in GitHub Desktop" button
 // @license MIT
 // @match https://github.com/*
-// @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js?version=754478
+// @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
 // @grant none
 // @connect github.com
 // @icon https://github.githubassets.com/pinned-octocat.svg

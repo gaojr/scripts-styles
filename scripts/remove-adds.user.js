@@ -3,15 +3,15 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.4
+// @version 0.5
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
 // @match https://*.baidu.com/*
 // @match https://www.iplaysoft.com/*
 // @match https://www.jianshu.com/*
-// @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js?version=754478
-// @require https://greasyfork.org/scripts/393202-cssutil/code/CssUtil.js?version=754549
+// @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
+// @require https://greasyfork.org/scripts/393202-cssutil/code/CssUtil.js
 // @grant none
 // @run-at document-end
 // ==/UserScript==
