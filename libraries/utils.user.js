@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.2
+// @version 0.3
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -36,10 +36,15 @@ const removeRecursively = function (ele) {
 /**
  * 移除选择器对象
  * @param selector 选择器
+ * @param only 是否仅移除该对象
  */
-const removeIt = function (selector) {
+const removeIt = function (selector, only) {
   try {
-    removeRecursively(document.querySelector(selector));
+    if (!!only) {
+      document.querySelector(selector).remove();
+    } else {
+      removeRecursively(document.querySelector(selector));
+    }
   } catch (e) {
     error('removeIt', e);
   }
