@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.3
+// @version 0.4
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
@@ -11,7 +11,8 @@
 // @match https://www.iplaysoft.com/*
 // @match https://www.jianshu.com/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js?version=754478
-// @grant GM_addStyle
+// @require https://greasyfork.org/scripts/393202-cssutil/code/CssUtil.js?version=754549
+// @grant none
 // @run-at document-end
 // ==/UserScript==
 
@@ -57,14 +58,19 @@ const dealScripts = function () {
  * 百度
  */
 const dealBaidu = function () {
+  // 贴吧
+  const tieba = /https:\/\/tieba\.baidu\.com\/.+/;
   // 贴吧-吧
   const tieba_bar = /https:\/\/tieba\.baidu\.com\/f\?.+/;
   // 贴吧-帖子
   const tieba_article = /https:\/\/tieba\.baidu\.com\/p\/.+/;
 
-  if (tieba_bar.test(wlh)) {
+
+  if (tieba.test(wlh)) {
     // 广告悬浮框
     targets.push('body > div.clearfix');
+  }
+  if (tieba_bar.test(wlh)) {
     // 右边的会员、热议、广告
     targets.push('#pagelet_encourage-celebrity\\/pagelet\\/celebrity');
     targets.push('#pagelet_frs-aside\\/pagelet\\/hottopic');
@@ -91,7 +97,7 @@ const dealCsdn = function () {
     targets.push('.recommend-box');
     targets.push('body>div:last-child');
     clickIt('#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a');
-    GM_addStyle('#mainBox > main { float: none;margin-left: auto;margin-right: auto; }');
+    clearCenter('#mainBox > main');
   }
 };
 
@@ -116,11 +122,11 @@ const dealIplaysoft = function () {
     targets.push('#section_event');
     targets.push('#section_hot');
     // 样式调整
-    GM_addStyle('#show_post_entry,#postlist { float: none;margin-left: auto;margin-right: auto; }');
+    clearCenter('#show_post_entry,#postlist');
   } else if (article.test(wlh)) {
     // 删除广告
-    targets.push('.post .entry-content+div');
-    targets.push('.post > div.entry-meta.clear > ul.same-cat-post+div');
+    targets.push('.post .entry-content + div');
+    targets.push('.post > div.entry-meta.clear > ul.same-cat-post + div');
     // 删除回复
     targets.push('div#respond');
 
@@ -131,8 +137,8 @@ const dealIplaysoft = function () {
       }
     });
     // 样式调整
-    GM_addStyle('#container #content { float: none;margin-left: auto;margin-right: auto; }');
-    GM_addStyle('#share_toolbar,.entry-banner,#respond { margin-left: auto;margin-right: auto; }');
+    floatNone('#container #content');
+    marginCenter('#container #content, #share_toolbar,.entry-banner,#respond');
   }
 };
 
@@ -144,7 +150,7 @@ const dealJianshu = function () {
   const article = /https:\/\/www\.jianshu\.com\/p\/.+/;
 
   if (article.test(wlh)) {
-    GM_addStyle('#__next ._3Pnjry,#__next > div._21bLU4._3kbg6I > div > aside,#__next > div._21bLU4._3kbg6I > div > div._gp-ck { display: none; }');
+    targets.push('#__next ._3Pnjry,#__next > div._21bLU4._3kbg6I > div > aside,#__next > div._21bLU4._3kbg6I > div > div._gp-ck');
   }
 };
 
