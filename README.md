@@ -38,6 +38,13 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 * [Direct Install](./scripts/github-hide-desktop.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
 
+#### github-update-forked
+
+GitHub更新fork仓库
+
+* [Direct Install](./scripts/github-update-forked.user.js)
+* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393205-github-update-forked)
+
 ## 脚本(别人写的)
 
 推荐的脚本及我的设置~
