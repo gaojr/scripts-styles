@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.7
+// @version 0.8
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -34,7 +34,12 @@ const _$$ = (selector, ele) => {
  * @param {Error} error 错误
  */
 const ce = (functionName, error) => {
-  console.error('function name: ' + functionName + "\nerror: " + error);
+  let msg = '';
+  if (!!functionName) {
+    msg = 'function name: ' + functionName + "\nerror: ";
+  }
+  msg += error;
+  console.error(msg);
 };
 
 /**
@@ -126,7 +131,8 @@ document.onreadystatechange = () => {
         value();
         console.log('TMscript end: ' + key);
       } catch (e) {
-        ce(key, e);
+        console.log('TMscript error: ' + key);
+        ce(e);
       }
     });
   }
