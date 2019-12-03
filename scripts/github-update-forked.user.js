@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn GitHub更新fork仓库
 // @name github-update-forked
-// @version 0.4
+// @version 0.5
 // @description update forked repository
 // @license MIT
 // @match https://github.com/*
@@ -77,7 +77,7 @@ const dealUpdateBtnHref = function (ele) {
       let prBtn = _$('div.branch-infobar .muted-link');
       if (prBtn.textContent.indexOf('Pull request') === -1) {
         // 有合并请求时不生成按钮
-        break;
+        return;
       }
       let updateBtn = prBtn.outerHTML.replace('Pull request', 'update');
       prBtn.outerHTML = updateBtn + prBtn.outerHTML;
