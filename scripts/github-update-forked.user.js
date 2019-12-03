@@ -3,10 +3,11 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn GitHub更新fork仓库
 // @name github-update-forked
-// @version 0.1
+// @version 0.2
 // @description update forked repository
 // @license MIT
 // @match https://github.com/*
+// @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
 // @grant none
 // @connect github.com
 // @icon https://github.githubassets.com/pinned-octocat.svg
@@ -19,7 +20,7 @@ const wlh = window.location.href;
  * @return {boolean} 是否为 forked 仓库
  */
 const isForked = function () {
-  return !!document.querySelector('.fork-flag');
+  return !!_$('.fork-flag');
 };
 
 /**
@@ -27,7 +28,7 @@ const isForked = function () {
  * @return {boolean} 是否落后
  */
 const isBehind = function () {
-  let content = document.querySelector('.branch-infobar').textContent;
+  let content = _$('.branch-infobar').textContent;
   return content.indexOf('behind') !== -1
 };
 
@@ -37,14 +38,13 @@ const isBehind = function () {
  */
 const getParentInfo = function () {
   if (isForked) {
-    let content = document.querySelector('.fork-flag a').textContent;
+    let content = _$('.fork-flag a').textContent;
     return {
       user: content.split('/')[0],
       repository: content.split('/')[1]
     };
-  } else {
-    return {};
   }
+  return {};
 };
 
 /**
@@ -55,7 +55,6 @@ const getParentInfo = function () {
 const getBranch = function (url) {
   let index = url.lastIndexOf('/') + 1;
   return url.substr(index);
-
 };
 
 /**
@@ -71,18 +70,15 @@ const dealUpdateBtnHref = function (ele) {
 };
 
 (function () {
-  window.onload = function () {
-    console.log('github-update-forked start!');
-    const isRepository = /https:\/\/github\.com\/[^\/]*\/[^\/]*/;
-    if (isRepository.test(wlh) && isForked() && isBehind()) {
-      // 生成更新按钮
-      let prBtn = document.querySelector('div.branch-infobar .muted-link');
-      let updateBtn = prBtn.outerHTML.replace('Pull request', 'update');
-      prBtn.outerHTML = updateBtn + prBtn.outerHTML;
-      // 绑定点击事件
-      dealUpdateBtnHref(document.querySelector('div.branch-infobar .muted-link'));
-    }
-    console.log('github-update-forked end!');
+  console.log('TMscript start: github-update-forked');
+  const isRepository = /https:\/\/github\.com\/[^\/]*\/[^\/]*/;
+  if (isRepository.test(wlh) && isForked() && isBehind()) {
+    // 生成更新按钮
+    let prBtn = _$('div.branch-infobar .muted-link');
+    let updateBtn = prBtn.outerHTML.replace('Pull request', 'update');
+    prBtn.outerHTML = updateBtn + prBtn.outerHTML;
+    // 绑定点击事件
+    dealUpdateBtnHref(_$('div.branch-infobar .muted-link'));
   }
-
+  console.log('TMscript end: github-update-forked');
 })();
