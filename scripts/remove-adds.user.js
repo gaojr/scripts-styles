@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.6
+// @version 0.7
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
@@ -13,7 +13,6 @@
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
 // @require https://greasyfork.org/scripts/393202-cssutil/code/CssUtil.js
 // @grant none
-// @run-at document-end
 // ==/UserScript==
 
 const wlh = window.location.href;
@@ -94,8 +93,9 @@ const dealCsdn = function () {
     targets.push('#dmp_ad_58');
     targets.push('#mainBox > aside');
     targets.push('.tool-box.vertical');
+    targets.push('.t0.clearfix');
     targets.push('.recommend-box');
-    targets.push('body>div:last-child');
+    targets.push('.csdn-side-toolbar');
     clickIt('#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a');
     clearCenter('#mainBox > main');
   }
