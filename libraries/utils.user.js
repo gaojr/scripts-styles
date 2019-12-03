@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.8
+// @version 0.9
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -124,7 +124,7 @@ document.onreadystatechange = () => {
     tempFunc();
   }
 
-  if (document.readyState === 'interactive') {
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
     funcMap.forEach((value, key) => {
       try {
         console.log('TMscript start: ' + key);
