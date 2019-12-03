@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.5
+// @version 0.6
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
@@ -157,10 +157,7 @@ const dealJianshu = function () {
 ////////// 分割线
 
 (function () {
-  'use strict';
-
-  window.onload = function () {
-    console.log('remove-adds start!');
+  let func = () => {
     dealCommons();
 
     const isBaidu = /https?:\/\/.*\.baidu\.com((\/.*)|(\/?))/;
@@ -178,7 +175,6 @@ const dealJianshu = function () {
       dealJianshu();
     }
     removeTarget();
-    console.log('remove-adds end!');
-  }
-
+  };
+  addToFuncMap('resmove-add', func);
 })();

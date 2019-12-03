@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @name GitHubHideDesktop
-// @version 0.4
+// @version 0.5
 // @description hide "Open in GitHub Desktop" button
 // @license MIT
 // @match https://github.com/*
@@ -14,10 +14,11 @@
 // ==/UserScript==
 
 (function () {
-  console.log('TMscript start: github-hide-desktop');
-  // 删除仓库页的 "Open in Desktop"
-  removeIt('.get-repo-modal-options .mt-2 .tooltipped.js-get-repo', true);
-  // 删除文件页的 "Open this file in GitHub Desktop"
-  removeIt('.btn-octicon.tooltipped', true);
-  console.log('TMscript end: github-hide-desktop');
+  let func = () => {
+    // 删除仓库页的 "Open in Desktop"
+    removeIt('.get-repo-modal-options .mt-2 .tooltipped.js-get-repo', true);
+    // 删除文件页的 "Open this file in GitHub Desktop"
+    removeIt('.btn-octicon.tooltipped', true);
+  };
+  addToFuncMap('github-hide-desktop', func);
 })();
