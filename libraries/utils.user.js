@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.6
+// @version 0.7
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -94,5 +94,40 @@ const clickIt = (selector) => {
     _$(selector).click();
   } catch (e) {
     ce('clickIt', e);
+  }
+};
+
+/**
+ * 要在document加载完成后运行的函数
+ */
+const funcMap = new Map();
+
+/**
+ * 加入方法map
+ * @param {string} name 名字
+ * @param {Function} func 方法
+ */
+const addToFuncMap = (name, func) => {
+  if (!funcMap.has(name)) {
+    funcMap.set(name, func);
+  }
+}
+
+let tempFunc = document.onreadystatechange;
+document.onreadystatechange = () => {
+  if (typeof (tempFunc) === 'function') {
+    tempFunc();
+  }
+
+  if (document.readyState === 'interactive') {
+    funcMap.forEach((value, key) => {
+      try {
+        console.log('TMscript start: ' + key);
+        value();
+        console.log('TMscript end: ' + key);
+      } catch (e) {
+        ce(key, e);
+      }
+    });
   }
 };
