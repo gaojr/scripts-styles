@@ -3,33 +3,54 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.4
+// @version 0.5
 // @description utility methods
 // @grant none
 // ==/UserScript==
+
+/**
+ * 类似jquery的选择器
+ * @param {string} selector 选择器
+ * @param {Element} ele 元素
+ * @return {Element} 元素
+ */
+const _$ = function (selector, ele) {
+  return (ele || document).querySelector(selector);
+}
+
+/**
+ * 类似jquery的选择器
+ * @param {string} selector 选择器
+ * @param {Element} ele 元素
+ * @return {NodeListOf<Element>} 元素
+ */
+const _$$ = function (selector, ele) {
+  return [...(ele || document).querySelectorAll(selector)];
+}
 
 /**
  * 输出错误
  * @param {string} functionName 方法名
  * @param {Error} error 错误
  */
-const error = function (functionName, error) {
+const ce = function (functionName, error) {
   console.error('function name: ' + functionName + "\nerror: " + error);
 };
 
 /**
  * 循环移除元素
- * @param {HTMLElement} ele 元素
+ * @param {Element} ele 元素
  */
 const removeRecursively = function (ele) {
   try {
-    let parent = ele.parentElement;
+    let parent = ele.parentNode;
     ele.remove();
     if (!!parent && !parent.innerHTML) {
+      // 父元素存在且父元素内容为空
       removeRecursively(parent);
     }
   } catch (e) {
-    error('removeRecursively', e);
+    ce('removeRecursively', e);
   }
 };
 
@@ -40,13 +61,13 @@ const removeRecursively = function (ele) {
  */
 const removeIt = function (selector, only) {
   try {
-    if (only === true) {
-      document.querySelector(selector).remove();
+    if (only === false) {
+      removeRecursively(_$(selector));
     } else {
-      removeRecursively(document.querySelector(selector));
+      _$(selector).remove();
     }
   } catch (e) {
-    error('removeIt', e);
+    ce('removeIt', e);
   }
 };
 
@@ -56,11 +77,11 @@ const removeIt = function (selector, only) {
  */
 const removeAll = function (selector) {
   try {
-    document.querySelectorAll(selector).forEach(function (ele) {
+    _$$(selector).forEach(function (ele) {
       removeRecursively(ele);
     });
   } catch (e) {
-    error('removeAll', e);
+    ce('removeAll', e);
   }
 };
 
@@ -70,8 +91,8 @@ const removeAll = function (selector) {
  */
 const clickIt = function (selector) {
   try {
-    document.querySelector(selector).click();
+    _$(selector).click();
   } catch (e) {
-    error('clickIt', e);
+    ce('clickIt', e);
   }
 };
