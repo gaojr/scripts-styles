@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.8
+// @version 0.9
 // @description remove adds
 // @license MIT
 // @match https://*/*
