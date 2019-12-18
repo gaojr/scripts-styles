@@ -33,9 +33,30 @@ const removeTarget = () => {
 ////////// 分割线
 
 /**
+ * 清楚iframe
+ */
+const cleanIframe = () => {
+  const baidu = /https:\/\/pos\.baidu\.com\//;
+  const google = /https:\/\/googleads/;
+
+  _$$('iframe').forEach((ele) => {
+    let src = ele.src;
+    if (baidu.test(src) || google.test(src)) {
+      targets.push(ele);
+    }
+  });
+  targets.forEach((ele) => {
+    removeRecursively(ele);
+  });
+  // 清空列表
+  targets.length = 0;
+};
+
+/**
  * 通用-广告
  */
 const dealCommons = () => {
+  cleanIframe();
   targets.push('.adsbygoogle');
   removeTarget();
 };
