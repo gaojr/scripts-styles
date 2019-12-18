@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.7
+// @version 0.8
 // @description remove adds
 // @license MIT
 // @match https://blog.csdn.net/*
@@ -11,7 +11,6 @@
 // @match https://www.iplaysoft.com/*
 // @match https://www.jianshu.com/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
-// @require https://greasyfork.org/scripts/393202-cssutil/code/CssUtil.js
 // @grant none
 // ==/UserScript==
 
@@ -96,8 +95,7 @@ const dealCsdn = function () {
     targets.push('.t0.clearfix');
     targets.push('.recommend-box');
     targets.push('.csdn-side-toolbar');
-    clickIt('#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a');
-    clearCenter('#mainBox > main');
+    clickIt('.btn-readmore');
   }
 };
 
@@ -121,8 +119,6 @@ const dealIplaysoft = function () {
     targets.push('#show_post_side');
     targets.push('#section_event');
     targets.push('#section_hot');
-    // 样式调整
-    clearCenter('#show_post_entry,#postlist');
   } else if (article.test(wlh)) {
     // 删除广告
     targets.push('.post .entry-content + div');
@@ -136,9 +132,6 @@ const dealIplaysoft = function () {
         ele.remove();
       }
     });
-    // 样式调整
-    floatNone('#container #content');
-    marginCenter('#container #content, #share_toolbar,.entry-banner,#respond');
   }
 };
 
@@ -150,7 +143,9 @@ const dealJianshu = function () {
   const article = /https:\/\/www\.jianshu\.com\/p\/.+/;
 
   if (article.test(wlh)) {
-    targets.push('#__next ._3Pnjry,#__next > div._21bLU4._3kbg6I > div > aside,#__next > div._21bLU4._3kbg6I > div > div._gp-ck');
+    targets.push('#__next ._3Pnjry');
+    targets.push('#__next > div._21bLU4._3kbg6I > div > aside');
+    targets.push('#__next > div._21bLU4._3kbg6I > div > div._gp-ck');
   }
 };
 
