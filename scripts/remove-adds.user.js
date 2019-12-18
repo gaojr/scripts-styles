@@ -6,10 +6,7 @@
 // @version 0.8
 // @description remove adds
 // @license MIT
-// @match https://blog.csdn.net/*
-// @match https://*.baidu.com/*
-// @match https://www.iplaysoft.com/*
-// @match https://www.jianshu.com/*
+// @match https://*/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
 // @grant none
 // ==/UserScript==
@@ -22,7 +19,7 @@ const targets = [];
 /**
  * 移除目标
  */
-const removeTarget = function () {
+const removeTarget = () => {
   // 用英文逗号拼接选择器
   let selector = targets.join();
   if (!selector) {
@@ -38,14 +35,15 @@ const removeTarget = function () {
 /**
  * 通用-广告
  */
-const dealCommons = function () {
+const dealCommons = () => {
   targets.push('.adsbygoogle');
   removeTarget();
 };
+
 /**
  * 通用-脚本
  */
-const dealScripts = function () {
+const dealScripts = () => {
   targets.push('body script');
   removeTarget();
 };
@@ -55,7 +53,7 @@ const dealScripts = function () {
 /**
  * 百度
  */
-const dealBaidu = function () {
+const dealBaidu = () => {
   // 贴吧
   const tieba = /https:\/\/tieba\.baidu\.com\/.+/;
   // 贴吧-吧
@@ -84,7 +82,7 @@ const dealBaidu = function () {
 /**
  * CSDN
  */
-const dealCsdn = function () {
+const dealCsdn = () => {
   // 文章页面
   const article = /https:\/\/.*\.csdn\.net\/.*\/article\/details\/.*/;
 
@@ -102,7 +100,7 @@ const dealCsdn = function () {
 /**
  * 异次元 iplaysoft.com
  */
-const dealIplaysoft = function () {
+const dealIplaysoft = () => {
   // 全局
   dealScripts();
   targets.push('iframe');
@@ -127,7 +125,7 @@ const dealIplaysoft = function () {
     targets.push('div#respond');
 
     // 删掉有 style、无 id、无 class、无文字的 div
-    document.querySelectorAll('div[style]:not([id]):not([class])').forEach(function (ele) {
+    document.querySelectorAll('div[style]:not([id]):not([class])').forEach((ele) => {
       if (!ele.textContent.trim()) {
         ele.remove();
       }
@@ -138,7 +136,7 @@ const dealIplaysoft = function () {
 /**
  * 简书
  */
-const dealJianshu = function () {
+const dealJianshu = () => {
   // 文章页面
   const article = /https:\/\/www\.jianshu\.com\/p\/.+/;
 
