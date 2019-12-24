@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.9
+// @version 0.10
 // @description remove adds
 // @license MIT
 // @match https://*/*
@@ -39,6 +39,9 @@ const cleanIframe = () => {
   const baidu = /https:\/\/pos\.baidu\.com\//;
   const google = /https:\/\/googleads/;
 
+  _$$('[data-google-query-id]').forEach((ele) => {
+    targets.push(ele);
+  });
   _$$('iframe').forEach((ele) => {
     let src = ele.src;
     if (baidu.test(src) || google.test(src)) {
