@@ -1,6 +1,6 @@
 // ==UserScript==
 // @author gaojr
-// @namespace https://github.com/gaojr/tampermonkey-scripts
+// @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @name GitHubHideDesktop
 // @version 0.5

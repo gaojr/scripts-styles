@@ -1,6 +1,6 @@
 // ==UserScript==
 // @author gaojr
-// @namespace https://github.com/gaojr/tampermonkey-scripts
+// @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
 // @version 1.0

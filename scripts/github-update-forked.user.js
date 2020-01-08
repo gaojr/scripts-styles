@@ -1,6 +1,6 @@
 // ==UserScript==
 // @author gaojr
-// @namespace https://github.com/gaojr/tampermonkey-scripts
+// @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn GitHub更新fork仓库
 // @name github-update-forked
 // @version 0.5
