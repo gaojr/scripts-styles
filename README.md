@@ -1,85 +1,106 @@
-# tampermonkey-scripts
+# scripts & styles
 
-Tampermonkey Scripts
+给 Tampermonkey 用的脚本和给 Stylus 用的样式
 
-## 脚本(我写的)
+## 我写的
 
-### 通用
+### remove-adds.js
 
-#### remove-adds
+![](https://img.shields.io/badge/type-script-informational)
 
-1. 推荐配合 stylus 的 `remove-adds` 使用
-2. 移除一些 css 不好判断的广告
+[![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/remove-adds.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/393030-removeadds)
 
-* [Direct Install](./scripts/remove-adds.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393030-removeadds)
+移除广告
 
-### Bilibili
+### BilibiliEnhanced
 
-#### BilibiliEnhanced
+![](https://img.shields.io/badge/type-script-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/bilibili-enhanced.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/380783-bilibilienhanced)
 
 1. 首页删除广告
 2. 视频时关闭弹幕、自动宽屏
 3. 直播时关闭弹幕
 
-* [Direct Install](./scripts/bilibili-enhanced.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/380783-bilibilienhanced)
+### GitHubGoTop
 
-### GitHub
+![](https://img.shields.io/badge/type-script-informational)
 
-#### GitHubGoTop
+[![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/392584-githubgotop)
 
 GitHub 增加“一键返回顶部”按钮
 
-* [Direct Install](./scripts/github-go-top.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/392584-githubgotop)
+### GitHubHideDesktop
 
-#### GitHubHideDesktop
+![](https://img.shields.io/badge/type-script-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/github-hide-desktop.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
 
 GitHub 隐藏与“GitHub Desktop”相关的按钮
 
-* [Direct Install](./scripts/github-hide-desktop.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/392623-githubhidedesktop)
+### github-update-forked
 
-#### github-update-forked
+![](https://img.shields.io/badge/type-script-informational)
 
-GitHub更新fork仓库
+[![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/github-update-forked.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/393205-github-update-forked)
 
-* [Direct Install](./scripts/github-update-forked.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393205-github-update-forked)
-
-## 脚本(别人写的)
-
-推荐的脚本及我的设置~
-
-* [StylishThemes/GitHub-Dark-Script](https://greasyfork.org/en/scripts/15562-github-dark-script)
-    <br/>![settings](./resources/GitHub-Dark_Settings.png)
-* [Mottie/GitHub code show whitespace](https://greasyfork.org/en/scripts/28454-github-code-show-whitespace)
-    ```json
-    {
-        "show-whitespace": "true"
-    }
-    ```
-* [Mottie/GitHub collapse markdown](https://greasyfork.org/en/scripts/20974-github-collapse-markdown)
-    ```json
-    {
-        "ghcm-collapsed": false,
-        "ghcm-colors": [ "#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc" ]
-    }
-    ```
-
-## 库(我写的)
+GitHub 更新 fork仓库
 
 ### utils
 
-一些公用方法
+![](https://img.shields.io/badge/type-library-informational)
 
-* [Direct Install](./libraries/utils.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393085-commonsutil)
+[![](https://img.shields.io/badge/Install-File-success.svg)](./libraries/utils.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/393085-commonsutil)
+
+一些公用方法
 
 ### css
 
-一些常用 css
+![](https://img.shields.io/badge/type-library-informational)
 
-* [Direct Install](./libraries/css.user.js)
-* [GreasyFork](https://greasyfork.org/zh-CN/scripts/393202-cssutil)
+[![](https://img.shields.io/badge/Install-File-success.svg)](./libraries/css.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/393202-cssutil)
+
+一些常用 css 方法
+
+## 别人写的
+
+推荐一些别人写的的脚本、样式及我的设置~
+
+### StylishThemes/GitHub-Dark-Script
+
+![](https://img.shields.io/badge/type-script-informational)
+
+[![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/15562-github-dark-script)
+
+设置:
+
+![settings](./resources/GitHub-Dark_Settings.png)
+
+### Mottie/GitHub code show whitespace
+
+![](https://img.shields.io/badge/type-script-informational)
+
+[![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/en/scripts/28454-github-code-show-whitespace)
+
+设置:
+
+```json
+{
+    "show-whitespace": "true"
+}
+```
+
+### Mottie/GitHub collapse markdown
+
+![](https://img.shields.io/badge/type-script-informational)
+
+[![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/en/scripts/20974-github-collapse-markdown)
+
+设置:
+
+```json
+{
+    "ghcm-collapsed": false,
+    "ghcm-colors": [ "#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc" ]
+}
+```
