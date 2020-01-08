@@ -1,0 +1,207 @@
+/* ==UserStyle==
+@author gaojr
+@namespace https://github.com/gaojr/tampermonkey-scripts
+@name:CN-zh_cn 移除广告css部分
+@name remove-adds-css
+@version 0.1
+@description remove adds
+@license MIT
+@preprocessor stylus
+==/UserStyle== */
+
+/* i really want this to be global */
+/* 通用 */
+.adsbygoogle {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+@-moz-document regexp("https:\\/\\/baike\\.baidu\\.com\\/.+") {
+
+    /* 百度-百科 */
+    .lemmaWgt-promotion-slide,
+    #side_box_unionAd,
+    .right-ad {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/tieba\\.baidu\\.com\\/f\\?.+") {
+
+    /* 百度-贴吧-吧 */
+    /* 广告悬浮框 */
+    body>div.clearfix,
+    /* 右边的会员、热议、广告 */
+    #pagelet_encourage-celebrity\/pagelet\/celebrity,
+    #pagelet_frs-aside\/pagelet\/hottopic,
+    #pagelet_frs-aside\/pagelet\/ad,
+    #branding_ads,
+    /* 列表中的广告 */
+    #thread_list>li.clearfix:not(.j_thread_list) {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/tieba\\.baidu\\.com\\/p\\/.+") {
+
+    /* 百度-贴吧-帖子 */
+    /* 广告悬浮框 */
+    body>div.clearfix,
+    /* 右边的会员、热议、广告 */
+    #celebrity,
+    #container .app_download_box,
+    #container div.topic_list_box,
+    /* 列表中的广告 */
+    #j_p_postlist>div.clearfix[ad-dom-img] {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document domain("www.cnblogs.com") {
+
+    /* 博客园 */
+    #cnblogs_a1,
+    #cnblogs_b1,
+    #cnblogs_b2,
+    #cnblogs_b3,
+    #cnblogs_b4,
+    #cnblogs_c1,
+    #cnblogs_c2 {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/.*\\.csdn\\.net\\/.*\\/article\\/details\\/.*") {
+
+    /* CSDN */
+    .blog-column-pay,
+    #dmp_ad_58,
+    #mainBox>aside,
+    .tool-box.vertical,
+    .t0.clearfix,
+    .hljs-button.signin,
+    .recommend-box,
+    .csdn-side-toolbar {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    #mainBox>main {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@-moz-document regexp("https?:\\/\\/www\\.iplaysoft\\.com((\\/.*)|(\\/?))") {
+
+    /* 异次元-通用 */
+    iframe,
+    .crumb_ad,
+    div#sidebar {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/www\\.iplaysoft\\.com\\/?$") {
+
+    /* 异次元-首页 */
+    /* 删除广告 */
+    #show_post_side,
+    #section_event,
+    #section_hot {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    /* 调整样式 */
+    #show_post_entry,
+    #postlist {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/www\\.iplaysoft\\.com\\/.+") {
+
+    /* 异次元-文章页面 */
+    /* 删除广告 */
+    .post .entry-content+div,
+    .post>div.entry-meta.clear>ul.same-cat-post+div,
+    /* 删除回复 */
+    div#respond {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    /* 调整样式 */
+    #container #content {
+        float: none;
+    }
+
+    #container #content,
+    #share_toolbar,
+    .entry-banner,
+    #respond {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/www\\.jianshu\\.com\\/p\\/.+") {
+
+    /* 简书 */
+    /* 左边浮动框的打赏 */
+    #__next ._3Pnjry ._1pUUKr:last-child,
+    /* 右边栏 */
+    #__next>div._21bLU4._3kbg6I>div>aside,
+    /* 正文后面的打赏 */
+    #__next>div._21bLU4._3kbg6I>div>div._gp-ck div._13lIbp,
+    /* 下面的推荐阅读 */
+    #__next>div._21bLU4._3kbg6I>div>div._gp-ck>.ouvJEz:last-child {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/segmentfault\\.com\\/q\\/.+") {
+
+    /* segmentfault */
+    .side {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    .main {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/shimo\\.im\\/.+") {
+
+    /* 石墨文档 */
+    .sm-ad-wrapper,
+    .sc-kuVjl-1 lnVjMk {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+}

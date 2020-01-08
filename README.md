@@ -4,6 +4,14 @@
 
 ## 我写的
 
+### remove-adds.css
+
+![](https://img.shields.io/badge/type-style-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](./css/remove-adds.user.css) [![](https://img.shields.io/badge/Install-Stylish-success.svg)](https://userstyles.org/styles/178935/remove-adds)
+
+移除广告
+
 ### remove-adds.js
 
 ![](https://img.shields.io/badge/type-script-informational)
