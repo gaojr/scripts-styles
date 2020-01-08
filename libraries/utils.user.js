@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 0.9
+// @version 1.0
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -132,7 +132,7 @@ document.onreadystatechange = () => {
         console.log('TMscript end: ' + key);
       } catch (e) {
         console.log('TMscript error: ' + key);
-        ce(e);
+        ce('', e);
       }
     });
   }
