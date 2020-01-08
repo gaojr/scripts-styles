@@ -6,7 +6,10 @@ Tampermonkey Scripts
 
 ### 通用
 
-移除广告
+#### remove-adds
+
+1. 推荐配合 stylus 的 `remove-adds` 使用
+2. 移除一些 css 不好判断的广告
 
 * [Direct Install](./scripts/remove-adds.user.js)
 * [GreasyFork](https://greasyfork.org/zh-CN/scripts/393030-removeadds)
