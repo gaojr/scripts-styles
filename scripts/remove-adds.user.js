@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/tampermonkey-scripts
 // @name:CN-zh_cn 移除广告
 // @name RemoveAdds
-// @version 0.11
+// @version 0.12
 // @description remove adds
 // @license MIT
 // @match https://*/*
@@ -56,20 +56,28 @@ const cleanIframe = () => {
       targets.push(ele);
     }
   });
-  removeTargetAsElement(targets);
 };
 
 /**
  * 通用-广告
  */
 const dealCommons = () => {
-  cleanIframe();
+  _$$('[data-google-query-id]').forEach((ele) => {
+    targets.push(ele);
+  });
+  _$$('[aria-label]').forEach((ele) => {
+    let label = ele.getAttribute('aria-label');
+    if (/baidu-ad/.test(label)) {
+      targets.push(ele);
+    }
+  });
 };
 
 /**
  * 通用-脚本
  */
 const dealScripts = () => {
+  // 干掉 body 里的脚本
   targets.push('body script');
   removeTargetAsSelector();
 };
@@ -112,7 +120,9 @@ const dealIplaysoft = () => {
 
 (function () {
   let func = () => {
+    cleanIframe();
     dealCommons();
+    removeTargetAsElement();
 
     const isCsdn = /https?:\/\/.*\.csdn\.net((\/.*)|(\/?))/;
     const isIplaysoft = /https?:\/\/www\.iplaysoft\.com((\/.*)|(\/?))/;
