@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.1
+@version 0.2
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -89,6 +89,7 @@
     .tool-box.vertical,
     .t0.clearfix,
     .hljs-button.signin,
+    .recommend-right,
     .recommend-box,
     .csdn-side-toolbar {
         display: none !important;
