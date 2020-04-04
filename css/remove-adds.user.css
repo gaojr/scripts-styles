@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.3
+@version 0.4
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -15,6 +15,16 @@
     display: none !important;
     height: 0 !important;
     width: 0 !important;
+}
+
+@-moz-document regexp("https:\\/\\/www\\.baidu\\.com\\/s\\?.+") {
+/* 百度-搜索 */
+    /* 侧边栏 */
+    #content_right {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
 }
 
 @-moz-document regexp("https:\\/\\/baike\\.baidu\\.com\\/.+") {
@@ -58,6 +68,23 @@
         display: none !important;
         height: 0 !important;
         width: 0 !important;
+    }
+}
+
+@-moz-document regexp("https:\\/\\/zhidao\\.baidu\\.com\\/search\\?.+") {
+/* 百度-知道-搜索 */
+    /* 侧边栏 */
+    aside.aside,
+    /* 底栏 */
+    .wgt-bottom-ask {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+    /* 调整样式 */
+    #footer {
+        padding-bottom: 0 !important;
     }
 }
 
