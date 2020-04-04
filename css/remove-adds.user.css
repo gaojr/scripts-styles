@@ -18,8 +18,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/baike\\.baidu\\.com\\/.+") {
-
-    /* 百度-百科 */
+/* 百度-百科 */
     .lemmaWgt-promotion-slide,
     #side_box_unionAd,
     .right-ad {
@@ -30,8 +29,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/tieba\\.baidu\\.com\\/f\\?.+") {
-
-    /* 百度-贴吧-吧 */
+/* 百度-贴吧-吧 */
     /* 广告悬浮框 */
     body>div.clearfix,
     /* 右边的会员、热议、广告 */
@@ -48,8 +46,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/tieba\\.baidu\\.com\\/p\\/.+") {
-
-    /* 百度-贴吧-帖子 */
+/* 百度-贴吧-帖子 */
     /* 广告悬浮框 */
     body>div.clearfix,
     /* 右边的会员、热议、广告 */
@@ -65,8 +62,7 @@
 }
 
 @-moz-document domain("www.cnblogs.com") {
-
-    /* 博客园 */
+/* 博客园 */
     #cnblogs_a1,
     #cnblogs_b1,
     #cnblogs_b2,
@@ -81,8 +77,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/.*\\.csdn\\.net\\/.*\\/article\\/details\\/.*") {
-
-    /* CSDN */
+/* CSDN */
     .blog-column-pay,
     #dmp_ad_58,
     #mainBox>aside,
@@ -97,6 +92,7 @@
         width: 0 !important;
     }
 
+    /* 调整样式 */
     #mainBox>main {
         float: none;
         margin-left: auto;
@@ -105,8 +101,7 @@
 }
 
 @-moz-document regexp("https?:\\/\\/www\\.iplaysoft\\.com((\\/.*)|(\\/?))") {
-
-    /* 异次元-通用 */
+/* 异次元-通用 */
     iframe,
     .crumb_ad,
     div#sidebar {
@@ -117,8 +112,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/www\\.iplaysoft\\.com\\/?$") {
-
-    /* 异次元-首页 */
+/* 异次元-首页 */
     /* 删除广告 */
     #show_post_side,
     #section_event,
@@ -138,8 +132,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/www\\.iplaysoft\\.com\\/.+") {
-
-    /* 异次元-文章页面 */
+/* 异次元-文章页面 */
     /* 删除广告 */
     .post .entry-content+div,
     .post>div.entry-meta.clear>ul.same-cat-post+div,
@@ -154,7 +147,6 @@
     #container #content {
         float: none;
     }
-
     #container #content,
     #share_toolbar,
     .entry-banner,
@@ -165,8 +157,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/www\\.jianshu\\.com\\/p\\/.+") {
-
-    /* 简书 */
+/* 简书 */
     /* 左边浮动框的打赏 */
     #__next ._3Pnjry ._1pUUKr:last-child,
     /* 右边栏 */
@@ -182,25 +173,23 @@
 }
 
 @-moz-document regexp("https:\\/\\/bbs\\.nga\\.cn\\/.+") {
-
-    /* nga */
+/* nga */
     #m_posts_c > span {
         display: none !important;
         height: 0 !important;
         width: 0 !important;
     }
-
 }
 
 @-moz-document regexp("https:\\/\\/segmentfault\\.com\\/q\\/.+") {
-
-    /* segmentfault */
+/* segmentfault */
     .side {
         display: none !important;
         height: 0 !important;
         width: 0 !important;
     }
 
+    /* 调整样式 */
     .main {
         margin-left: auto;
         margin-right: auto;
@@ -208,8 +197,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/shimo\\.im\\/.+") {
-
-    /* 石墨文档 */
+/* 石墨文档 */
     .sm-ad-wrapper,
     .sc-kuVjl-1 lnVjMk {
         display: none !important;
