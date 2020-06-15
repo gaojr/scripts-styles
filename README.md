@@ -52,7 +52,7 @@ GitHub 隐藏与“GitHub Desktop”相关的按钮
 
 [![](https://img.shields.io/badge/Install-File-success.svg)](./scripts/github-update-forked.user.js) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/393205-github-update-forked)
 
-GitHub 更新 fork仓库
+GitHub 更新 fork 仓库
 
 ### utils
 
@@ -94,7 +94,7 @@ GitHub 更新 fork仓库
 
 ```json
 {
-    "show-whitespace": "true"
+  "show-whitespace": "true"
 }
 ```
 
@@ -108,7 +108,7 @@ GitHub 更新 fork仓库
 
 ```json
 {
-    "ghcm-collapsed": false,
-    "ghcm-colors": [ "#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc" ]
+  "ghcm-collapsed": false,
+  "ghcm-colors": ["#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc"]
 }
 ```

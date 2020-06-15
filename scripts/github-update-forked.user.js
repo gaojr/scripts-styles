@@ -40,7 +40,7 @@ const getParentInfo = function () {
   let content = _$('.fork-flag a').textContent;
   return {
     user: content.split('/')[0],
-    repository: content.split('/')[1]
+    repository: content.split('/')[1],
   };
 };
 

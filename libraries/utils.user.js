@@ -16,7 +16,7 @@
  */
 const _$ = (selector, ele) => {
   return (ele || document).querySelector(selector);
-}
+};
 
 /**
  * 类似jquery的选择器
@@ -26,7 +26,7 @@ const _$ = (selector, ele) => {
  */
 const _$$ = (selector, ele) => {
   return [...(ele || document).querySelectorAll(selector)];
-}
+};
 
 /**
  * 输出错误
@@ -36,7 +36,7 @@ const _$$ = (selector, ele) => {
 const ce = (functionName, error) => {
   let msg = '';
   if (!!functionName) {
-    msg = 'function name: ' + functionName + "\nerror: ";
+    msg = 'function name: ' + functionName + '\nerror: ';
   }
   msg += error;
   console.error(msg);
@@ -116,11 +116,11 @@ const addToFuncMap = (name, func) => {
   if (!funcMap.has(name)) {
     funcMap.set(name, func);
   }
-}
+};
 
 let tempFunc = document.onreadystatechange;
 document.onreadystatechange = () => {
-  if (typeof (tempFunc) === 'function') {
+  if (typeof tempFunc === 'function') {
     tempFunc();
   }
 

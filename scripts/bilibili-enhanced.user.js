@@ -22,16 +22,16 @@
     var live = /live.bilibili.com/;
     if (home.test(url)) {
       // 首页-删除广告
-      $(".adpos").remove();
-      $(".gg-floor-module").remove();
+      $('.adpos').remove();
+      $('.gg-floor-module').remove();
     } else if (video.test(url)) {
       // 视频-宽屏
-      $(".bilibili-player-video-btn-widescreen").click();
+      $('.bilibili-player-video-btn-widescreen').click();
       // 视频-关闭弹幕
-      $(".bilibili-player-video-danmaku-switch .bui-checkbox").click();
+      $('.bilibili-player-video-danmaku-switch .bui-checkbox').click();
     } else if (live.test(url)) {
       // 直播-关闭弹幕
-      $(".bilibili-live-player-video-controller-hide-danmaku-btn .blpui-btn.icon-btn").click();
+      $('.bilibili-live-player-video-controller-hide-danmaku-btn .blpui-btn.icon-btn').click();
     }
   }, delay);
 })();
