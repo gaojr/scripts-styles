@@ -29,7 +29,7 @@ const isForked = function () {
  */
 const isBehind = function () {
   let content = _$('.branch-infobar').textContent;
-  return content.indexOf('behind') !== -1
+  return content.indexOf('behind') !== -1;
 };
 
 /**
@@ -37,14 +37,11 @@ const isBehind = function () {
  * @return {*} 父项目信息
  */
 const getParentInfo = function () {
-  if (isForked) {
-    let content = _$('.fork-flag a').textContent;
-    return {
-      user: content.split('/')[0],
-      repository: content.split('/')[1]
-    };
-  }
-  return {};
+  let content = _$('.fork-flag a').textContent;
+  return {
+    user: content.split('/')[0],
+    repository: content.split('/')[1]
+  };
 };
 
 /**
@@ -65,7 +62,7 @@ const dealUpdateBtnHref = function (ele) {
   let parentInfo = getParentInfo();
   let href = ele.href.replace('pull/new', 'compare');
   let branch = getBranch(href);
-  href += '...' + parentInfo.user + '/' + branch;
+  href += '...' + parentInfo.user + ':' + branch;
   ele.href = href;
 };
 
