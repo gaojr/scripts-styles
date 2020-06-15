@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn GitHub更新fork仓库
 // @name github-update-forked
-// @version 0.5
+// @version 0.6
 // @description update forked repository
 // @license MIT
 // @match https://github.com/*
