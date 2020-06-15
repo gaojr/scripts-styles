@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @name GitHubHideDesktop
-// @version 0.5
+// @version 0.6
 // @description hide "Open in GitHub Desktop" button
 // @license MIT
 // @match https://github.com/*
@@ -16,7 +16,7 @@
 (function () {
   let func = () => {
     // 删除仓库页的 "Open in Desktop"
-    removeIt('.get-repo-modal-options .mt-2 .tooltipped.js-get-repo', true);
+    removeIt('.get-repo-modal .mt-2 .tooltipped.js-remove-unless-platform', true);
     // 删除文件页的 "Open this file in GitHub Desktop"
     removeIt('.btn-octicon.tooltipped', true);
   };
