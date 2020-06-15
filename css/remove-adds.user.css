@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.4
+@version 0.5
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -164,7 +164,11 @@
     .post .entry-content+div,
     .post>div.entry-meta.clear>ul.same-cat-post+div,
     /* 删除回复 */
-    div#respond {
+    div#respond,
+    /* 二维码 */
+    div.post_wechat_qr,
+    /* 捐赠 */
+    div.donate {
         display: none !important;
         height: 0 !important;
         width: 0 !important;
