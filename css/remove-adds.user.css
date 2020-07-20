@@ -236,25 +236,25 @@
     width: 0 !important;
     height: 0 !important;
   }
+}
 
-  @-moz-document regexp("https:\\/\\/post\\.smzdm\\.com\\/p\\/.+") {
-    /* 什么值得买 */
-    /* 侧边栏 */
-    #feed-side,
-    /* 右下角浮动框 */
-    #elevator {
-      display: none !important;
-      width: 0 !important;
-      height: 0 !important;
-    }
+@-moz-document regexp("https:\\/\\/post\\.smzdm\\.com\\/p\\/.+") {
+  /* 什么值得买 */
+  /* 侧边栏 */
+  #feed-side,
+  /* 右下角浮动框 */
+  #elevator {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
 
-    /* 调整样式 */
-    #feed-main {
-      width: 100%;
-    }
-    .detailed_banner {
-      margin-right: auto;
-      margin-left: auto;
-    }
+  /* 调整样式 */
+  #feed-main {
+    width: 100%;
+  }
+  .detailed_banner {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
