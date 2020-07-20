@@ -164,6 +164,7 @@
   /* 删除广告 */
   .post .entry-content + div,
   .post > div.entry-meta.clear > ul.same-cat-post + div,
+  .entry-recommend-posts,
   /* 删除回复 */
   div#respond,
   /* 二维码 */
