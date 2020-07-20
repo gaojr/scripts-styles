@@ -43,10 +43,12 @@
   /* 百度-贴吧-吧 */
   /* 广告悬浮框 */
   body > div.clearfix,
+  /* 右边的会员、热议、广告 */
   #pagelet_encourage-celebrity\/pagelet\/celebrity,
   #pagelet_frs-aside\/pagelet\/hottopic,
   #pagelet_frs-aside\/pagelet\/ad,
   #branding_ads,
+  /* 列表中的广告 */
   #thread_list > li.clearfix:not(.j_thread_list) {
     display: none !important;
     width: 0 !important;
@@ -58,9 +60,11 @@
   /* 百度-贴吧-帖子 */
   /* 广告悬浮框 */
   body > div.clearfix,
+  /* 右边的会员、热议、广告 */
   #celebrity,
   #container .app_download_box,
   #container div.topic_list_box,
+  /* 列表中的广告 */
   #j_p_postlist > div.clearfix[ad-dom-img] {
     display: none !important;
     width: 0 !important;
@@ -72,6 +76,7 @@
   /* 百度-知道-搜索 */
   /* 侧边栏 */
   aside.aside,
+  /* 底栏 */
   .wgt-bottom-ask {
     display: none !important;
     width: 0 !important;
@@ -159,8 +164,11 @@
   /* 删除广告 */
   .post .entry-content + div,
   .post > div.entry-meta.clear > ul.same-cat-post + div,
+  /* 删除回复 */
   div#respond,
+  /* 二维码 */
   div.post_wechat_qr,
+  /* 捐赠 */
   div.donate {
     display: none !important;
     width: 0 !important;
@@ -184,8 +192,11 @@
   /* 简书 */
   /* 左边浮动框的打赏 */
   #__next ._3Pnjry ._1pUUKr:last-child,
+  /* 右边栏 */
   #__next > div._21bLU4._3kbg6I > div > aside,
+  /* 正文后面的打赏 */
   #__next > div._21bLU4._3kbg6I > div > div._gp-ck div._13lIbp,
+  /* 下面的推荐阅读 */
   #__next > div._21bLU4._3kbg6I > div > div._gp-ck > .ouvJEz:last-child {
     display: none !important;
     width: 0 !important;
