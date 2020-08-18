@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.7
+@version 0.8
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -257,5 +257,16 @@
   .detailed_banner {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@-moz-document regexp("http://y.webzcz.cn/") {
+  /* Free Music */
+  a[href="http://youhui.in/"],
+  #ad_right,
+  #barrage {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 }
