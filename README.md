@@ -141,3 +141,11 @@ GitHub 更新 fork 仓库
   "ghcm-colors": ["#0066ff", "#3271b9", "#769fcd", "#b9d7ea", "#d6e6f2", "#f7fbfc"]
 }
 ```
+
+### Mottie/GitHub-userscripts
+
+[![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/en/users/24847-mottie?site=github.com&sort=total_installs)
+
+[![](https://img.shields.io/badge/Install-GitHub-success.svg)](https://github.com/Mottie/GitHub-userscripts)
+
+Userscripts to add functionality to GitHub
