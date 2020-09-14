@@ -76,13 +76,42 @@ GitHub 更新 fork 仓库
 
 ### StylishThemes/GitHub-Dark-Script
 
+> @Deprecated
+> 作者貌似把这个东西拆成几个 css 和 js 了……
+
 ![](https://img.shields.io/badge/type-script-informational)
 
 [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/15562-github-dark-script)
 
 设置:
 
+![settings](./resources/GitHub-Dark-Script_Settings.png)
+
+### StylishThemes/GitHub-Dark
+
+![](https://img.shields.io/badge/type-style-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css)
+
+设置:
+
 ![settings](./resources/GitHub-Dark_Settings.png)
+
+### StylishThemes/GitHub-Dark/github-custom-fonts
+
+![](https://img.shields.io/badge/type-style-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css)
+
+设置:
+
+![settings](./resources/github-custom-fonts-_Settings.png)
+
+### StylishThemes/GitHub-code-wrap
+
+![](https://img.shields.io/badge/type-style-informational)
+
+[![](https://img.shields.io/badge/Install-File-success.svg)](https://raw.githubusercontent.com/StylishThemes/GitHub-code-wrap/master/github-code-wrap.user.css)
 
 ### Mottie/GitHub code show whitespace
 
