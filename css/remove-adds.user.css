@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.8
+@version 0.9
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -205,9 +205,10 @@
   }
 }
 
-@-moz-document regexp("https:\\/\\/bbs\\.nga\\.cn\\/.+") {
+@-moz-document regexp("https:\\/\\/bbs\\.nga\\.cn\\/.+"), regexp("https:\\/\\/g\\.nga\\.cn\\/.+") {
   /* nga */
-  #m_posts_c > span {
+  #m_posts_c > span,
+  #b_nav {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
