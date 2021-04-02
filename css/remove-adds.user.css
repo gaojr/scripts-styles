@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.10
+@version 0.11
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -139,6 +139,15 @@
     float: none;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@-moz-document url-prefix("https://www.gcores.com/articles") {
+  /* 机核-文章 */
+  .newsPage_r {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 }
 
@@ -279,6 +288,7 @@
 @-moz-document url-prefix("http://y.webzcz.cn/") {
   /* Free Music */
   a[href="http://youhui.in/"],
+  a[href="http://tq.pymll.cn"],
   #ad_right,
   #barrage {
     display: none !important;
