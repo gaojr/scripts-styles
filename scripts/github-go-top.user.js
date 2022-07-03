@@ -29,4 +29,17 @@
   goTop.onclick = function () {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   };
+
+  if (window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    imgBox.style.filter="invert(100%)";
+  }
+  window.matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', event => {
+    if (event.matches) {
+      imgBox.style.filter="invert(100%)";//dark mode
+    } else {
+      imgBox.style.filter="";//light mode
+    }
+  })
 })();
