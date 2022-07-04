@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.11
+@version 0.12
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -23,6 +23,7 @@
   #custom_html-2,
   #custom_html-3,
   #media_image-2,
+  #media_image-3,
   #media_image-5,
   #media_image-7,
   #mts_recent_posts_widget-2 {
@@ -188,6 +189,7 @@
   .post .entry-content + div,
   .post > div.entry-meta.clear > ul.same-cat-post + div,
   .entry-recommend-posts,
+  #link1111,
   /* 删除回复 */
   div#respond,
   /* 二维码 */
@@ -291,6 +293,23 @@
   a[href="http://tq.pymll.cn"],
   #ad_right,
   #barrage {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://www.qubook.net/read.php") {
+  /* 趣书网 */
+  body {
+    background: none;
+  }
+}
+
+@-moz-document url-prefix("https://www.json.cn/") {
+  /* json.cn */
+  div.xf-window,
+  main > div.col-md-7.col-xs-7 > div.tool > ul {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
