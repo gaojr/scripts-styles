@@ -1,11 +1,12 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn 工具类
 // @name CommonsUtil
+// @name:CN-zh_cn 工具类
 // @version 1.1
 // @description utility methods
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @grant none
+// @match *
 // ==/UserScript==
 
 /**
