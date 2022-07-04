@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn Github一键返回顶部
 // @name GithubGoTop
-// @version 0.4
+// @version 0.5
 // @description scroll top
 // @license MIT
 // @match *github.com/*
@@ -29,4 +29,18 @@
   goTop.onclick = function () {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   };
+  // theme mode
+  var html = document.querySelector('html');
+  html.onchange = function () {
+    if (html.getAttribute('data-color-mode') === 'dark') {
+      // github: dark
+      imgBox.style.filter = "invert(100%)";
+    } else if (html.getAttribute('data-color-mode') === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // github: auto && system: dark
+      imgBox.style.filter = "invert(100%)";
+    } else {
+      imgBox.style.filter = "";
+    }
+  };
+  html.onchange();
 })();
