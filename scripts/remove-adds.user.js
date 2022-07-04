@@ -1,10 +1,10 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn 移除广告
 // @name remove-adds
+// @name:CN-zh_cn 移除广告
 // @version 0.13
 // @description remove adds
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
 // @match https://*/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js

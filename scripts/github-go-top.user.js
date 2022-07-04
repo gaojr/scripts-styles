@@ -1,10 +1,10 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn Github一键返回顶部
 // @name GithubGoTop
+// @name:CN-zh_cn Github一键返回顶部
 // @version 0.5
 // @description scroll top
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
 // @match *github.com/*
 // @grant none

@@ -1,10 +1,10 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn BilibiliEnhanced
 // @name BilibiliEnhanced
+// @name:CN-zh_cn BilibiliEnhanced
 // @version 0.7
 // @description bilibili相关
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
 // @match *.bilibili.com/*
 // @grant none

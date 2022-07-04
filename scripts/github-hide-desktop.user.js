@@ -1,10 +1,10 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @name GitHubHideDesktop
+// @name:CN-zh_cn GitHub隐藏Desktop按钮
 // @version 0.7
 // @description hide "Open in GitHub Desktop" button
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
 // @match https://github.com/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js

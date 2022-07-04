@@ -1,10 +1,10 @@
 // ==UserScript==
-// @author gaojr
-// @namespace https://github.com/gaojr/scripts-styles
-// @name:CN-zh_cn GitHub更新fork仓库
 // @name github-update-forked
+// @name:CN-zh_cn GitHub更新fork仓库
 // @version 0.6
 // @description update forked repository
+// @author gaojr
+// @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
 // @match https://github.com/*
 // @require https://greasyfork.org/scripts/393085-commonsutil/code/CommonsUtil.js
