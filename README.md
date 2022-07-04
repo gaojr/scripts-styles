@@ -74,11 +74,12 @@ GitHub 更新 fork 仓库
 
 推荐一些别人写的的脚本、样式及我的设置~
 
-### StylishThemes/GitHub-Dark-Script
+### ~~StylishThemes/GitHub-Dark-Script~~
 
 > @Deprecated
-> 作者貌似把这个东西拆成几个 css 和 js 了……
+> 现在github自带暗黑模式了
 
+<!--
 ![](https://img.shields.io/badge/type-script-informational)
 
 [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/zh-CN/scripts/15562-github-dark-script)
@@ -96,6 +97,7 @@ GitHub 更新 fork 仓库
 设置:
 
 ![settings](./resources/GitHub-Dark_Settings.png)
+-->
 
 ### StylishThemes/GitHub-Dark/github-custom-fonts
 
@@ -144,8 +146,6 @@ GitHub 更新 fork 仓库
 
 ### Mottie/GitHub-userscripts
 
-[![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/en/users/24847-mottie?site=github.com&sort=total_installs)
-
-[![](https://img.shields.io/badge/Install-GitHub-success.svg)](https://github.com/Mottie/GitHub-userscripts)
+[![](https://img.shields.io/badge/Install-GitHub-success.svg)](https://github.com/Mottie/GitHub-userscripts) [![](https://img.shields.io/badge/Install-GreasyFork-success.svg)](https://greasyfork.org/en/users/24847-mottie?site=github.com&sort=total_installs)
 
 Userscripts to add functionality to GitHub
