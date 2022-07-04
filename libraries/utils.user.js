@@ -6,7 +6,7 @@
 // @author gaojr
 // @namespace https://github.com/gaojr/scripts-styles
 // @grant none
-// @match *
+// @match https://*/*
 // ==/UserScript==
 
 /**

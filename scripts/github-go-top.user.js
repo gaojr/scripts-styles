@@ -6,7 +6,7 @@
 // @author gaojr
 // @namespace https://github.com/gaojr/scripts-styles
 // @license MIT
-// @match *github.com/*
+// @match https://*github.com/*
 // @grant none
 // @connect github.com
 // @icon https://github.githubassets.com/pinned-octocat.svg
