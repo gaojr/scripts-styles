@@ -3,7 +3,7 @@
 // @namespace https://github.com/gaojr/scripts-styles
 // @name:CN-zh_cn 工具类
 // @name CommonsUtil
-// @version 1.0
+// @version 1.1
 // @description utility methods
 // @grant none
 // ==/UserScript==
@@ -50,7 +50,7 @@ const removeRecursively = (ele) => {
   try {
     let parent = ele.parentNode;
     ele.remove();
-    if (!!parent && !parent.innerHTML) {
+    if (parent && parent.innerHTML && !parent.innerHTML.match(/\S/)) {
       // 父元素存在且父元素内容为空
       removeRecursively(parent);
     }
