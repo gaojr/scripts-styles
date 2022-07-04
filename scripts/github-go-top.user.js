@@ -32,15 +32,10 @@
   // theme mode
   var html = document.querySelector('html');
   html.onchange = function () {
-    if (html.getAttribute('data-color-mode') === 'dark') {
-      // github: dark
-      imgBox.style.filter = "invert(100%)";
-    } else if (html.getAttribute('data-color-mode') === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // github: auto && system: dark
-      imgBox.style.filter = "invert(100%)";
-    } else {
-      imgBox.style.filter = "";
-    }
+    var github_mode = html.getAttribute('data-color-mode');
+    var system_dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    imgBox.style.filter = "light" === github_mode ? "" : "dark" === github_mode || system_dark ? "invert(100%)" : "";
   };
+  window.matchMedia && (window.matchMedia('(prefers-color-scheme: dark)').onchange = html.onchange);
   html.onchange();
 })();
