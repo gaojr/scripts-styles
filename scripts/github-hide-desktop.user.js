@@ -15,10 +15,9 @@
 
 (function () {
   let func = () => {
-    // 删除仓库页的 "Open in Desktop"
-    removeIt('.get-repo-modal div[data-target] ul li[data-platforms]', true);
-    // 删除文件页的 "Open this file in GitHub Desktop"
-    removeIt('a.btn-octicon.tooltipped', true);
+    // 删除仓库页的 "Open with GitHub Desktop"
+    // 删除文件页的 "Open in GitHub Desktop"
+    removeIt('a[href="https://desktop.github.com"]', false);
   };
   addToFuncMap('github-hide-desktop', func);
 })();
