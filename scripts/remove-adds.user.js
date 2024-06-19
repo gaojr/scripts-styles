@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name remove-adds
 // @name:CN-zh_cn 移除广告
-// @version 0.13
+// @version 0.14
 // @description remove adds
 // @author gaojr
 // @namespace https://github.com/gaojr/scripts-styles
@@ -57,6 +57,20 @@ const cleanIframe = () => {
     }
   });
 };
+
+/**
+ * 通用
+ */
+const deal = (list) => {
+  list.forEach((e) => {
+    _$$(e).forEach((ele) => {
+      if (!ele.textContent.trim()) {
+        targets.push(ele);
+      }
+    });
+  });
+  removeTargetAsElement();
+}
 
 /**
  * 通用-广告
@@ -126,11 +140,14 @@ const dealIplaysoft = () => {
 
     const isCsdn = /https?:\/\/.*\.csdn\.net((\/.*)|(\/?))/;
     const isIplaysoft = /https?:\/\/www\.iplaysoft\.com((\/.*)|(\/?))/;
+    const isWenku8 = /https?:\/\/www\.wenku8\.net\/novel((\/.*)|(\/?))/;
 
     if (isCsdn.test(wlh)) {
       dealCsdn();
     } else if (isIplaysoft.test(wlh)) {
       dealIplaysoft();
+    } else if (isWenku8.test(wlh)) {
+      deal(['div#adv900']);
     }
     removeTargetAsSelector();
   };
