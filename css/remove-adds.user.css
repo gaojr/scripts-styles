@@ -3,7 +3,7 @@
 @namespace https://github.com/gaojr/scripts-styles
 @name:CN-zh_cn 移除广告css部分
 @name remove-adds-css
-@version 0.12
+@version 0.13
 @description remove adds
 @license MIT
 @preprocessor stylus
@@ -14,8 +14,8 @@
 /* 通用 */
 .adsbygoogle {
   display: none !important;
-  width: 0 !important;
   height: 0 !important;
+  width: 0 !important;
 }
 
 @-moz-document url-prefix("https://www.appinn.com") {
@@ -38,8 +38,8 @@
   /* 侧边栏 */
   #content_right {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -49,8 +49,8 @@
   #side_box_unionAd,
   .right-ad {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -66,8 +66,8 @@
   /* 列表中的广告 */
   #thread_list > li.clearfix:not(.j_thread_list) {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -82,8 +82,8 @@
   /* 列表中的广告 */
   #j_p_postlist > div.clearfix[ad-dom-img] {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -94,8 +94,8 @@
   /* 底栏 */
   .wgt-bottom-ask {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 
   /* 调整样式 */
@@ -114,8 +114,8 @@
   #cnblogs_c1,
   #cnblogs_c2 {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -131,15 +131,15 @@
   .recommend-box,
   .csdn-side-toolbar {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 
   /* 调整样式 */
   #mainBox > main {
     float: none;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -158,8 +158,8 @@
   .crumb_ad,
   div#sidebar {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -170,16 +170,16 @@
   #section_event,
   #section_hot {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 
   /* 调整样式 */
   #show_post_entry,
   #postlist {
     float: none;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -197,8 +197,8 @@
   /* 捐赠 */
   div.donate {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 
   /* 调整样式 */
@@ -209,8 +209,8 @@
   #share_toolbar,
   .entry-banner,
   #respond {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -225,19 +225,19 @@
   /* 下面的推荐阅读 */
   #__next > div._21bLU4._3kbg6I > div > div._gp-ck > .ouvJEz:last-child {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
 @-moz-document regexp("https:\\/\\/bbs\\.nga\\.cn\\/.+"), regexp("https:\\/\\/g\\.nga\\.cn\\/.+") {
   /* nga */
-  #m_posts_c > span,
   .null,
-  #b_nav {
+  #b_nav,
+  #m_posts_c > span {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -245,24 +245,24 @@
   /* segmentfault */
   .side {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 
   /* 调整样式 */
   .main {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @-moz-document regexp("https:\\/\\/shimo\\.im\\/.+") {
   /* 石墨文档 */
   .sm-ad-wrapper,
-  .sc-kuVjl-1 lnVjMk {/* stylelint-disable-line */
+  .sc-kuVjl-1 lnVjMk {
     display: none !important;
-    width: 0 !important;
     height: 0 !important;
+    width: 0 !important;
   }
 }
 
@@ -313,5 +313,63 @@
     display: none !important;
     width: 0 !important;
     height: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://manga.bilibili.com/") {
+  /* b站漫画 */
+  .app-promo {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://www.bilibili.com/video") {
+  /* b站视频 */
+  .video-card-ad-small {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://www.pilibook.net/") {
+  /* 霹雳书坊 */
+  body > div:nth-child(6),
+  body > div:nth-child(7),
+  body > div:nth-child(3),
+  #note {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://starrailstation.com/cn/planner") {
+  /* starrail station */
+  #adanchormobile,
+  #calc-top {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+@-moz-document url-prefix("https://www.dida365.com/webapp") {
+  /* 滴答清单 */
+  #left-view div.t-user~div.flex-auto>div:last-child {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+@-moz-document url-prefix(" https://act.mihoyo.com/ys/app/interactive-map/index.html") {
+  /* 米游社-原神-地图 */
+  .bbs-qr {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
   }
 }
